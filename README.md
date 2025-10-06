@@ -1,4 +1,4 @@
-# DeepFilter Multimedia
+# dfm - DeepFilter Multimedia
 
 [![PyPI version](https://img.shields.io/pypi/v/deepfilter-multimedia.svg)](https://pypi.org/project/deepfilter-multimedia/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
