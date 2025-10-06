@@ -1,0 +1,6 @@
+data/
+output/
+
+.env
+
+.venv

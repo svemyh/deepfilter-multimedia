@@ -1,0 +1,4 @@
+deepfilternet
+numpy
+torch
+torchaudio
