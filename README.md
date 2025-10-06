@@ -7,12 +7,11 @@ Remove noise from audio and video files using [DeepFilterNet](https://github.com
 
 ## Features
 
-- 🎵 **Audio Support**: WAV, MP3, FLAC, OGG, M4A, AAC, WMA
-- 🎬 **Video Support**: MP4, MKV, AVI, MOV, WebM, FLV, WMV, M4V
-- 🚀 **Easy CLI**: Simple command-line interface (`dfm`)
-- 🔄 **Batch Processing**: Process multiple files at once
-- 🎯 **Auto-detection**: Automatically detects file type
-- 🛠️ **Based on DeepFilterNet**: Uses pretrained deep learning models
+- **Audio Support**: WAV, MP3, FLAC, OGG, M4A, AAC, WMA
+- **Video Support**: MP4, MKV, AVI, MOV, WebM, FLV, WMV, M4V
+- **Easy CLI**: Simple command-line interface (`dfm`)
+- **Auto-detection**: Automatically detects file type
+- **Batch Processing**: Process multiple files at once
 
 ## Installation
 
@@ -131,6 +130,9 @@ print(f"Enhanced video saved to: {output_path}")
    - Applies DeepFilterNet noise reduction
    - Saves enhanced audio
 
+### Model Download
+On first run, DeepFilterNet will download the pretrained model (~50MB). This may take a few moments.
+
 ## Supported Formats
 
 ### Video
@@ -165,33 +167,9 @@ DeepFilterNet is dual-licensed under MIT and Apache 2.0 licenses.
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Troubleshooting
-
-### FFmpeg not found
-Make sure FFmpeg is installed and available in your PATH:
-```bash
-ffmpeg -version
-```
-
-### CUDA/GPU Support
-For GPU acceleration, install PyTorch with CUDA support:
-```bash
-pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu118
-```
-
-### Model Download
-On first run, DeepFilterNet will download the pretrained model (~50MB). This may take a few moments.
-
 ## Links
 
 - [DeepFilterNet Repository](https://github.com/Rikorose/DeepFilterNet)
 - [DeepFilterNet Paper](https://arxiv.org/abs/2110.05588)
-- [Report Issues](https://github.com/yourusername/deepfilter-multimedia/issues)
-
-## Changelog
-
-### 0.1.0 (Initial Release)
-- Basic CLI implementation
-- Support for audio and video files
-- Batch processing
-- Auto-detection of file types
+- [Report Issues](https://github.com/svemyh/deepfilter-multimedia/issues)
+- [Changelog](CHANGELOG.md)
