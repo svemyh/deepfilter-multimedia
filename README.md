@@ -130,8 +130,15 @@ print(f"Enhanced video saved to: {output_path}")
    - Applies DeepFilterNet noise reduction
    - Saves enhanced audio
 
-### Model Download
-On first run, DeepFilterNet will download the pretrained model (~50MB). This may take a few moments.
+### Important Notes
+
+**Sample Rate:** DeepFilterNet is optimized for 48kHz audio. Input files at other sample rates (16kHz, 44.1kHz, etc.) will be **automatically resampled to 48kHz** before processing. Output files are saved at 48kHz.
+
+- **Quality:** The model works best with 48kHz audio as it was trained on this sample rate
+- **Upsampling:** Files below 48kHz (e.g., 16kHz phone recordings) will be upsampled - results may vary
+- **Downsampling:** Files above 48kHz (e.g., 96kHz studio recordings) will be downsampled - some high-frequency information may be lost
+
+**Model Download:** On first run, DeepFilterNet will download the pretrained model (~50MB). This may take a few moments.
 
 ## Supported Formats
 
@@ -173,3 +180,31 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [DeepFilterNet Paper](https://arxiv.org/abs/2110.05588)
 - [Report Issues](https://github.com/svemyh/deepfilter-multimedia/issues)
 - [Changelog](CHANGELOG.md)
+
+## Troubleshooting
+
+### Sample Rate Issues
+
+**Q: My audio is 44.1kHz (CD quality). Will it work?**  
+A: Yes! It will be automatically resampled to 48kHz. Quality should be excellent since you're only changing sample rate slightly.
+
+**Q: My recording is 16kHz (phone/voice). Will noise reduction work?**  
+A: Yes, but results may vary. The model is trained on 48kHz, so upsampling from 16kHz may not capture all the detail the model expects. Try it and see - many users report good results even with lower sample rates.
+
+**Q: Why is my output always 48kHz?**  
+A: DeepFilterNet is specifically trained on 48kHz audio and cannot operate at other sample rates. This is a fundamental limitation of the model architecture.
+
+### FFmpeg Issues
+
+**FFmpeg not found:**  
+Make sure FFmpeg is installed and available in your PATH:
+```bash
+ffmpeg -version
+```
+
+### CUDA/GPU Support
+
+For GPU acceleration, install PyTorch with CUDA support:
+```bash
+pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu118
+```

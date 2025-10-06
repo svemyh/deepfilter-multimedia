@@ -86,6 +86,10 @@ def process_audio_file(
     """
     Process audio file with noise reduction.
 
+    Note: DeepFilterNet is optimized for 48kHz audio. Input files at other sample
+    rates will be automatically resampled to 48kHz for processing. The output will
+    be saved at 48kHz.
+
     Args:
         input_path: Path to input audio file
         output_path: Path to save enhanced audio
@@ -102,10 +106,17 @@ def process_audio_file(
             print("Loading DeepFilterNet model...")
         model, df_state, _ = init_df()
 
-    # Load and enhance audio
+    # Load audio and check sample rate
+    if verbose:
+        print("Loading audio...")
+    audio, info = load_audio(input_path, sr=df_state.sr())
+
+    if info.sample_rate != df_state.sr() and verbose:
+        print(f"Note: Input sample rate ({info.sample_rate}Hz) resampled to {df_state.sr()}Hz (required by DeepFilterNet)")
+
+    # Enhance audio
     if verbose:
         print("Enhancing audio...")
-    audio, _ = load_audio(input_path, sr=df_state.sr())
     enhanced = enhance(model, df_state, audio)
 
     # Save enhanced audio
