@@ -10,3 +10,8 @@ dist/
 build/
 *.egg-info/
 __pycache__/
+
+deepfilter_multimedia/__pycache__
+
+__pycache__
+*/__pycache__

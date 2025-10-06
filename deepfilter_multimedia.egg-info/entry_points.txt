@@ -1,2 +1,0 @@
-[console_scripts]
-dfm = deepfilter_multimedia.cli:main
