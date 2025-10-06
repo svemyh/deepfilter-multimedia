@@ -15,7 +15,7 @@ setup(
     description="Noise reduction for audio and video files using DeepFilterNet",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/deepfilter-multimedia",
+    url="https://github.com/svemyh/deepfilter-multimedia",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -44,8 +44,8 @@ setup(
     },
     keywords="audio video noise-reduction deepfilternet speech-enhancement",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/deepfilter-multimedia/issues",
-        "Source": "https://github.com/yourusername/deepfilter-multimedia",
+        "Bug Reports": "https://github.com/svemyh/deepfilter-multimedia/issues",
+        "Source": "https://github.com/svemyh/deepfilter-multimedia",
         "DeepFilterNet": "https://github.com/Rikorose/DeepFilterNet",
     },
 )

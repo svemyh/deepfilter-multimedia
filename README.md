@@ -1,5 +1,6 @@
 # DeepFilter Multimedia
 
+[![PyPI version](https://img.shields.io/pypi/v/deepfilter-multimedia.svg)](https://pypi.org/project/deepfilter-multimedia/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
@@ -15,14 +16,13 @@ Remove noise from audio and video files using [DeepFilterNet](https://github.com
 
 ## Installation
 
-### From PyPI (when published)
+### From PyPI
 
 ```bash
 pip install deepfilter-multimedia
 ```
 
 ### From Source
-
 ```bash
 # Clone the repository
 git clone https://github.com/svemyh/deepfilter-multimedia.git
@@ -139,14 +139,6 @@ print(f"Enhanced video saved to: {output_path}")
 - **Downsampling:** Files above 48kHz (e.g., 96kHz studio recordings) will be downsampled - some high-frequency information may be lost
 
 **Model Download:** On first run, DeepFilterNet will download the pretrained model (~50MB). This may take a few moments.
-
-## Supported Formats
-
-### Video
-MP4, MKV, AVI, MOV, WebM, FLV, WMV, M4V
-
-### Audio
-WAV, MP3, FLAC, OGG, M4A, AAC, WMA
 
 ## Attribution
 
