@@ -7,7 +7,7 @@
 Remove noise from audio and video files using [DeepFilterNet](https://github.com/Rikorose/DeepFilterNet). This CLI tool (`dfm`) provides a simple interface for applying state-of-the-art deep learning-based noise reduction to multimedia files.
 
 <div align="center">
-  <img src="docs/assets/dfm-visualizer.png" alt="DFM Visualizer">
+  <img src="https://raw.githubusercontent.com/svemyh/deepfilter-multimedia/main/docs/assets/dfm-visualizer.png" alt="DFM Visualizer">
 </div>
 
 ## Features

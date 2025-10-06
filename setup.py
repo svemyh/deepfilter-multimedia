@@ -9,7 +9,7 @@ long_description = readme_file.read_text(encoding="utf-8") if readme_file.exists
 
 setup(
     name="deepfilter-multimedia",
-    version="0.1.0",
+    version="0.1.3",
     author="Sveinung Myhre",
     author_email="",
     description="Noise reduction for audio and video files using DeepFilterNet",
@@ -36,6 +36,7 @@ setup(
         "deepfilternet>=0.5.0",
         "torch>=1.9.0",
         "torchaudio>=0.9.0",
+        "soundfile>=0.12.0",
     ],
     entry_points={
         "console_scripts": [
